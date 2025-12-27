@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Node / JS
+node_modules/
+dist/~
