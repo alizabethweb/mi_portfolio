@@ -1,9 +1,9 @@
 # Importamos las librerias necesarias
 
-from flask import Flask, jsonify, request, render_template
-from bs4 import BeautifulSoup
-import requests
-import plotly.express as px
+# from flask import Flask, jsonify, request, render_template
+# from bs4 import BeautifulSoup
+# import requests
+# import plotly.express as px
 from argostranslate import package, translate
 import argostranslate.package
 import argostranslate.translate
