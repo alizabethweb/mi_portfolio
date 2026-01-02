@@ -1,0 +1,71 @@
+<!--Templates|base.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth Ramirez - Personal Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+   
+<div class="sidebar" >
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <span class="icon logo-icon">
+                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+                    </span>
+                    <span class="text"> Elizabeth Ramirez</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-file-pdf"></i></span>
+                    <span class="text">Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-chart-simple"></i></span>
+                    <span class="text">Skills</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-diagram-project"></i></span>
+                    <span class="text">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-feather"></i></span>
+                    <span class="text">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa-solid fa-paper-plane"></i></span>
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-socials">
+  <ul>
+    <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+    <li><a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+    <li><a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+  </ul>
+</div>
+
+<div class="main-content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

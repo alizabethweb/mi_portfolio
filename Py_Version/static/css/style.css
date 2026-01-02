@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Playfair+Display:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #edeaea;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 75px;
+  z-index: 1;
+  background: #1A3E59;
+  overflow-x: hidden;
+  padding-top: 10px;
+  transition: 0.6s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0,.5);
+}
+
+.sidebar ul li a .icon img {
+  width: 32px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sidebar .icon i {
+    color: #7B4F2A; 
+}
+
+.sidebar:hover {
+  width: 250px;
+  transition: 0.6s ease;
+
+}
+
+.sidebar ul {
+  position: relative;
+  height: 97vh;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.sidebar ul li:hover {
+  background: #556B2F;
+  transition: 0.3s ease;
+}
+
+.sidebar ul li a {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #edeaea
+}
+
+.sidebar ul li .logo {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li .logo .text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sidebar ul li:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.sidebar ul li a .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 75px;
+  height: 60px;
+  font-size: 22px;
+}
+
+.sidebar ul li a .text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+}
+
+.sidebar-socials ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+}
+
+.sidebar-socials ul li a {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  margin: 10px 0;
+  line-height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #1A3E59; /* igual que sidebar */
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-socials ul li a .icon {
+  transition: 0.5s;
+}
+
+.sidebar-socials ul li a:hover .icon {
+  transform: rotateY(360deg);
+  color: #f0f4f8; /* o el color que quieras al hover */
+}

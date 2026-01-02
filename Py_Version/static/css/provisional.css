@@ -1,0 +1,13 @@
+
+
+:root {
+  --bg-primary: linear-gradient(135deg, #f0f4f8, #ffffff);
+  --bg-secondary: #ffffff;
+  --text-primary: #1A3E59; /* Azul Marino Profundo */
+  --accent: #7B4F2A; /* Café Madera Cálido */
+  --accent-hover: #8f5e36; /* Variación más clara del Café Madera */
+  --detail: #556B2F; /* Verde Oliva Profundo */
+  --header-bg: #1A3E59; /* Azul Marino Profundo */
+  --footer-bg: #1A3E59; /* Azul Marino Profundo */
+  --card-bg: #ffffff;
+}
