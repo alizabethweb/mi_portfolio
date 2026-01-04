@@ -8,10 +8,29 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-   
+
+<input type="checkbox" id="close-window" class="hidden">
+    <div id="overlay" class="overlay"></div>
+    <div class="window-notice">
+        <div class="logo-cntnr"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"> </div>
+        <div class="content">
+            <div class="content-text">Select language</div>
+                <div><ul class="menu">
+                    <li><label for="close-window" class="lang-btn"><span> English</span></label></li>
+                    <li><label for="close-window" class="lang-btn"><span> Español</span></label></li>
+                    <li><label for="close-window" class="lang-btn"><span> Français</span></label></li>
+                    <li><label for="close-window" class="lang-btn"><span> Danskere</span></label></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 <div class="sidebar" >
         <ul>
             <li>
@@ -22,47 +41,82 @@
                     <span class="text"> Elizabeth Ramirez</span>
                 </a>
             </li>
+
             <li>
                 <a href="#">
-                    <span class="icon"><i class="fa-solid fa-file-pdf"></i></span>
+                    <span class="icon"><i class="fa-solid fa-id-card"></i></span>
                     <span class="text">Resume</span>
                 </a>
             </li>
+
             <li>
                 <a href="#">
                     <span class="icon"><i class="fa-solid fa-chart-simple"></i></span>
                     <span class="text">Skills</span>
                 </a>
             </li>
+
             <li>
                 <a href="#">
                     <span class="icon"><i class="fa-solid fa-diagram-project"></i></span>
                     <span class="text">Projects</span>
                 </a>
             </li>
+
             <li>
                 <a href="#">
                     <span class="icon"><i class="fa-solid fa-feather"></i></span>
                     <span class="text">Blog</span>
                 </a>
             </li>
+
             <li>
                 <a href="#">
                     <span class="icon"><i class="fa-solid fa-paper-plane"></i></span>
                     <span class="text">Contact</span>
                 </a>
             </li>
+
+            <li class="social-trigger">
+                <a href="#">
+                    <span class="icon"><i class="fa fa-user-astronaut"></i></span>
+                </a>
+                <div class="social-menu">
+                    <a href="https://github.com/alizabethweb" target="_blank"><i class="fab fa-github icon"></i></a>
+                    <a href="www.linkedin.com/in/elizabeth-rm" target="_blank"><i class="fab fa-linkedin-in icon"></i></a>
+                    <a href="https://www.youtube.com/channel/UCPfvYl0HPgT1EntYPZzZBQw" target="_blank"><i class="fab fa-youtube icon"></i></a>
+                </div>
+            </li> 
         </ul>
+            <div class="sidebar-footer">
+        © {{ year }} Elizabeth Ramirez
     </div>
-    <div class="sidebar-socials">
-  <ul>
-    <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
-    <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
-    <li><a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
-    <li><a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
-  </ul>
 </div>
 
+<button>
+   
+<ul>
+   <li style="--i:#556B2F;--j:#7B4F2A">
+    <span class="icon"><ion-icon name="heart-outline"></ion-icon></span>
+    <span class="title">Like</span>
+  </li>
+  </ul>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</button>
+
+  <!-- lang selector-->
+<div class="lang-button">
+    <ul>
+   <li style="--i:#7B4F2A;--j:#556B2F">
+    <span class="icon"><ion-icon name="planet"></ion-icon></span>
+    <span class="title">Like</span>
+  </li>
+  </ul>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</div>
+<!-- Container -->
 <div class="main-content">
     {% block content %}{% endblock %}
 </div>

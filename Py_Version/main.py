@@ -7,13 +7,18 @@ from argostranslate import package, translate
 from flask_mail import Mail, Message
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 
 #init flask
 app = Flask(__name__)
     
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template(
+        "home.html",
+        year=datetime.now().year
+        )
+    
 #create the contact system | based on: https://github.com/Sachin-crypto/Flask-Contact-Page.git
 
 load_dotenv()
